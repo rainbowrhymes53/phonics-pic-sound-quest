@@ -1,0 +1,117 @@
+{
+  "source": "code-archive (spellb-main.zip, Lovable TanStack Start project)",
+  "capabilities": [
+    {
+      "capability": "code",
+      "source": "src/ (routes /, /phonics; data, lib, ui components)",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "verified home, phonics, play flow"
+    },
+    {
+      "capability": "assets",
+      "source": "public/audio (phonics MP3s), public/words (SVG clue images), favicon",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "verified clips and pictures served"
+    },
+    {
+      "capability": "schema",
+      "source": "none - no database in source",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "records",
+      "source": "none - progress kept in browser localStorage only",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "auth_identities",
+      "source": "none - no sign-in in source",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "authorization",
+      "source": "none",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "uploaded_file_bytes",
+      "source": "none - static assets only",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "ai_hints",
+      "source": "src/lib/hint.functions.ts via Lovable AI Gateway (openai/gpt-6-astra)",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "verified live AI hint returned"
+    },
+    {
+      "capability": "on_device_tts",
+      "source": "@jtsage/piper-tts-web + Web Speech in src/lib/speech.ts",
+      "outcome": "preserve",
+      "status": "accepted",
+      "next_action": "installed; voice playback not audible in headless check"
+    },
+    {
+      "capability": "session_validation",
+      "source": "FingerprintJS + localStorage (src/lib/session-tracking.ts)",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "installed"
+    },
+    {
+      "capability": "analytics",
+      "source": "@vercel/analytics <Analytics /> in __root",
+      "outcome": "preserve",
+      "status": "accepted",
+      "next_action": "kept; reports only when hosted on Vercel"
+    },
+    {
+      "capability": "public_endpoints",
+      "source": "none besides the hint server function",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "callbacks_webhooks_schedules",
+      "source": "none",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "secrets",
+      "source": "LOVABLE_API_KEY (Lovable-provisioned)",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "LOVABLE_API_KEY present"
+    },
+    {
+      "capability": "cutover",
+      "source": "new Lovable project URL",
+      "outcome": "accept",
+      "status": "pending",
+      "next_action": "publish when ready"
+    },
+    {
+      "capability": "verification",
+      "source": "build, tests, routes, hint call",
+      "outcome": "verify",
+      "status": "verified",
+      "next_action": "build OK, 3 tests pass, pages and hint checked"
+    }
+  ]
+}
