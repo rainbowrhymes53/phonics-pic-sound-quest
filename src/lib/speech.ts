@@ -75,6 +75,10 @@ function notifyModelLoading(state: ModelLoadingState) {
   }
 }
 
+export function stopAllAudio() {
+  stopAll();
+}
+
 function stopAll() {
   playToken += 1;
   if (currentAudio) {
